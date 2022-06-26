@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ClassLibraryEF.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20220623003608_text1")]
-    partial class text1
+    [Migration("20220624130608_helps")]
+    partial class helps
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -46,7 +46,6 @@ namespace ClassLibraryEF.Migrations
                         .HasColumnType("tinyint");
 
                     b.Property<string>("LastLoginIP")
-                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 

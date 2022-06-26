@@ -44,7 +44,6 @@ namespace ClassLibraryEF.Migrations
                         .HasColumnType("tinyint");
 
                     b.Property<string>("LastLoginIP")
-                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 

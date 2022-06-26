@@ -34,3 +34,15 @@ D:\专高六\作业\WebApplication1\WebApplication1\Model\obj\Debug\net5.0\Model
 D:\专高六\作业\WebApplication1\WebApplication1\Model\obj\Debug\net5.0\refint\Model.dll
 D:\专高六\作业\WebApplication1\WebApplication1\Model\obj\Debug\net5.0\Model.pdb
 D:\专高六\作业\WebApplication1\WebApplication1\Model\obj\Debug\net5.0\ref\Model.dll
+D:\专高六\作业\6.24\WebApplication1\WebApplication1\Model\bin\Debug\net5.0\Model.deps.json
+D:\专高六\作业\6.24\WebApplication1\WebApplication1\Model\bin\Debug\net5.0\Model.dll
+D:\专高六\作业\6.24\WebApplication1\WebApplication1\Model\bin\Debug\net5.0\Model.pdb
+D:\专高六\作业\6.24\WebApplication1\WebApplication1\Model\obj\Debug\net5.0\Model.csproj.AssemblyReference.cache
+D:\专高六\作业\6.24\WebApplication1\WebApplication1\Model\obj\Debug\net5.0\Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\专高六\作业\6.24\WebApplication1\WebApplication1\Model\obj\Debug\net5.0\Model.AssemblyInfoInputs.cache
+D:\专高六\作业\6.24\WebApplication1\WebApplication1\Model\obj\Debug\net5.0\Model.AssemblyInfo.cs
+D:\专高六\作业\6.24\WebApplication1\WebApplication1\Model\obj\Debug\net5.0\Model.csproj.CoreCompileInputs.cache
+D:\专高六\作业\6.24\WebApplication1\WebApplication1\Model\obj\Debug\net5.0\Model.dll
+D:\专高六\作业\6.24\WebApplication1\WebApplication1\Model\obj\Debug\net5.0\refint\Model.dll
+D:\专高六\作业\6.24\WebApplication1\WebApplication1\Model\obj\Debug\net5.0\Model.pdb
+D:\专高六\作业\6.24\WebApplication1\WebApplication1\Model\obj\Debug\net5.0\ref\Model.dll

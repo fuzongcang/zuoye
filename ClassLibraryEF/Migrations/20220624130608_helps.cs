@@ -17,7 +17,7 @@ namespace ClassLibraryEF.Migrations
                     Password = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Email = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     LastLoginTime = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    LastLoginIP = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    LastLoginIP = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
                     IsLock = table.Column<byte>(type: "tinyint", nullable: false),
                     CreateTime = table.Column<DateTime>(type: "datetime2", nullable: false),
                     CreateId = table.Column<int>(type: "int", nullable: false),

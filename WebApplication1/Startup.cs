@@ -1,4 +1,5 @@
 using ClassLibraryEF;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -8,14 +9,18 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using RbacApplication;
+using RbacApplication.Admins;
 using RbacApplication.Role;
 using RbacRepository;
+using Swashbuckle.AspNetCore.Filters;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace WebApplication1
@@ -42,6 +47,8 @@ namespace WebApplication1
             services.AddScoped<Iapplication, Application>();
             services.AddScoped<IRoleDto, RbacRepository.Role.RoleDto>();
             services.AddScoped<IRoleService, RoleService>();
+            services.AddScoped<IAdminRepository,AdminRepository>();
+            services.AddScoped<IAdminService, AdminService>();
 
             services.AddCors(s => {
                 s.AddPolicy("cors", a =>
@@ -50,9 +57,54 @@ namespace WebApplication1
                 });
             });
 
+            services.AddAuthentication(option =>
+            {
+                option.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                option.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(
+           option =>
+           {
+                //Token验证参数
+                option.TokenValidationParameters = new TokenValidationParameters
+               {
+                    //是否验证发行人
+                    ValidateIssuer = true,
+                   ValidIssuer = Configuration["JwtConfig:Issuer"],//发行人
+
+                    //是否验证受众人
+                    ValidateAudience = true,
+                   ValidAudience = Configuration["JwtConfig:Audience"],//受众人
+
+                    //是否验证密钥
+                    ValidateIssuerSigningKey = true,
+                   IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["JwtConfig:key"])),
+
+                   ValidateLifetime = true, //验证生命周期
+
+                    RequireExpirationTime = true, //过期时间
+
+                    ClockSkew = TimeSpan.Zero   //平滑过期偏移时间
+                };
+           }
+);
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebApplication1", Version = "v1" });
+
+                //开启权限小锁
+                c.OperationFilter<AddResponseHeadersFilter>();
+                c.OperationFilter<AppendAuthorizeToSummaryOperationFilter>();
+                c.OperationFilter<SecurityRequirementsOperationFilter>();
+
+                //在header中添加token，传递到后台
+                c.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme
+                {
+                    Description = "JWT授权(数据将在请求头中进行传递)直接在下面框中输入Bearer {token}(注意两者之间是一个空格) \"",
+                    Name = "Authorization",//jwt默认的参数名称
+                    In = ParameterLocation.Header,//jwt默认存放Authorization信息的位置(请求头中)
+                    Type = SecuritySchemeType.ApiKey
+                });
             });
         }
 
@@ -70,7 +122,10 @@ namespace WebApplication1
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            //认证中间件
+            app.UseAuthentication();
 
+            //授权中间件
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

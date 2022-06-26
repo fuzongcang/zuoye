@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "db04EUit0Q9qFq3QyIBE0RVyyV5izha8TpttvnoyigAIQ3ERRhBjBJaHjsz8Cbvnn/R1sn/rHz6NNvVAlSdqog==",
+  "dgSpecHash": "yFkTN5P4xLYTb/49gO4TQE048aclfZ7JYhs/QlnoOe6n3fNfr98njjijSOKb5ttmus7V1mhi8OS5EBMmsrpdHg==",
   "success": true,
-  "projectFilePath": "D:\\专高六\\作业\\WebApplication1\\WebApplication1\\ClassLibraryEF\\ClassLibraryEF.csproj",
+  "projectFilePath": "D:\\专高六\\作业\\6.24\\WebApplication1\\WebApplication1\\ClassLibraryEF\\ClassLibraryEF.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\86175\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\86175\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

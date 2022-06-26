@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "pupEvPDNLECuhzuWVX6X8wBl1wZQovfsb4lgIVvNFEdX2fryn7V4YiXf7eAT+DjC8m9MHlBU35VnyQ/+/8YnCw==",
+  "dgSpecHash": "mL9hSTbDJlOxME1Br+RA+VWC89A+vj6iSYljlLcoLO/ZpvmXxpXwYRLr979/69wmldk6O+CGqDy78X0qkzFeSA==",
   "success": true,
-  "projectFilePath": "D:\\专高六\\作业\\WebApplication1\\WebApplication1\\RbacApplication\\RbacApplication.csproj",
+  "projectFilePath": "D:\\专高六\\作业\\6.24\\WebApplication1\\WebApplication1\\RbacApplication\\RbacApplication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\86175\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
     "C:\\Users\\86175\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
+    "C:\\Users\\86175\\.nuget\\packages\\identitymodel\\6.0.0\\identitymodel.6.0.0.nupkg.sha512",
     "C:\\Users\\86175\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\86175\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
     "C:\\Users\\86175\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.0.1\\microsoft.data.sqlclient.sni.runtime.2.0.1.nupkg.sha512",

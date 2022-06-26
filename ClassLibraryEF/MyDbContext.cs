@@ -23,7 +23,7 @@ namespace ClassLibraryEF
                 m.Property(m => m.UserName).HasMaxLength(50).IsRequired();
                 m.Property(m => m.Password).HasMaxLength(50).IsRequired();
                 m.Property(m => m.Email).HasMaxLength(50).IsRequired();
-                m.Property(m => m.LastLoginIP).HasMaxLength(50).IsRequired();
+                m.Property(m => m.LastLoginIP).HasMaxLength(50);
             });
             modelBuilder.Entity<Role>(m =>
             {

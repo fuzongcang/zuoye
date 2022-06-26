@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using ClassLibraryEF;
@@ -28,6 +29,10 @@ namespace RbacRepository
         public virtual T Get(int id)
         {
             return db.Set<T>().Find(id);
+        }
+        public T Get(Expression<Func<T, bool>> predicate)
+        {
+            return db.Set<T>().Where(predicate).FirstOrDefault();
         }
 
         public virtual List<T> GetAll()
