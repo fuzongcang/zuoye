@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Rbac.Entity;
 using RbacApplication;
 using RbacRepository;
@@ -9,6 +10,7 @@ namespace WebApplication1.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
+    [Authorize]//标签，特性 Attribute
     public class VUEController : ControllerBase
     {
         public VUEController(Iapplication iapplication)

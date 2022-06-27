@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RbacApplication;
 using RbacApplication.Role;
@@ -7,6 +8,7 @@ namespace WebApplication1.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
+    [Authorize]//标签，特性 Attribute
     public class RoleController : ControllerBase
     {
         private readonly IRoleService role;
