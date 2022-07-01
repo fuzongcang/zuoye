@@ -11,5 +11,6 @@ namespace RbacApplication
         int Add(Menu menu);
         int Del(Menu menu);
         int Edit(Menu menu);
+        List<Menu> Show();
     }
 }

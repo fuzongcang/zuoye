@@ -64,5 +64,15 @@ namespace WebApplication1.Controllers
         {
             return Ok(prostsfjkst.Del(menu));
         }
+        /// <summary>
+        /// 获取所有信息
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [AllowAnonymous]
+        public IActionResult Show()
+        {
+            return Ok(prostsfjkst.Show());
+        }
     }
 }

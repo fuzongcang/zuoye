@@ -26,5 +26,10 @@ namespace WebApplication1.Controllers
         {
             return Ok(admin.Login(dto));
         }
+        [HttpGet]
+        public IActionResult Page(int Pindex = 1, int Psize = 2)
+        {
+            return Ok(admin.Page(Pindex,Psize));
+        }
     }
 }

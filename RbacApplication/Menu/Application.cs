@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace RbacApplication
 {
-    public class Application:Iapplication
+    public class Application : Iapplication
     {
         public Application(Irepository instpsnsjf)
         {
@@ -51,7 +51,7 @@ namespace RbacApplication
                 GetNodes(_list);
             }
         }
-        
+
 
         /// <summary>
         /// 级联菜单
@@ -80,7 +80,7 @@ namespace RbacApplication
                 var _list = list.Where(s => s.ParentId == item.value).Select(s => new MenuCrealist
                 {
                     value = s.MenuId,
-                    label= s.MenuName,
+                    label = s.MenuName,
                 }).ToList();
                 item.children.AddRange(_list);
                 GetNodesList(_list);
@@ -101,6 +101,11 @@ namespace RbacApplication
         public int Edit(Menu menu)
         {
             return fjslkfsfkejfsl.Edit(menu);
+        }
+
+        public List<Menu> Show() 
+        {
+            return fjslkfsfkejfsl.GetAll();
         }
     }
 }

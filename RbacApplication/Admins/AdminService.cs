@@ -13,6 +13,7 @@ using IdentityModel;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.Extensions.Configuration;
+using Rbac.Entity;
 
 namespace RbacApplication.Admins
 {
@@ -105,5 +106,11 @@ namespace RbacApplication.Admins
             return new TokenDto { Code = 0, Msg = "登录成功", ToKed = jwt };
         }
 
+        public Tuple<List<Admin>, int> Page(int Pindex = 1, int Psize = 2)
+        {
+            var list = mapper.Map<List<Admin>>(AdminRepository.GetAll().OrderBy(s => s.AdminId).Skip((Pindex - 1)* Psize).Take(Psize).ToList());
+            var count = AdminRepository.GetAll().Count();
+            return new Tuple<List<Admin>, int>(list, count);
+        }
     }
 }

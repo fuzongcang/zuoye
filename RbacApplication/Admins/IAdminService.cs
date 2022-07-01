@@ -1,4 +1,5 @@
-﻿using RbacApplication.Admins.Dto;
+﻿using Rbac.Entity;
+using RbacApplication.Admins.Dto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,7 @@ namespace RbacApplication.Admins
     {
         ResultDto Register(AdminDto dto);
         TokenDto Login(LoginDto dto);
+        Tuple<List<Admin>,int>  Page(int Pindex = 1,int Psize = 2);
        
     }
 }
