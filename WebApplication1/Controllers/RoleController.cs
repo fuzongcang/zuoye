@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RbacApplication;
 using RbacApplication.Role;
+using RbacApplication.Role.Dto;
 
 namespace WebApplication1.Controllers
 {
@@ -46,6 +47,11 @@ namespace WebApplication1.Controllers
         public IActionResult Upd(RoleDto r)
         {
             return Ok(role.Update(r));
+        }
+        [HttpPost]
+        public IActionResult SavePermission(PermissionDto permission) 
+        {
+            return Ok(role.SavePermission(permission));
         }
     }
 }

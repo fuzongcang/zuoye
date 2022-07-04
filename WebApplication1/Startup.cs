@@ -15,6 +15,7 @@ using RbacApplication;
 using RbacApplication.Admins;
 using RbacApplication.Role;
 using RbacRepository;
+using RbacRepository.MenuRoles;
 using Swashbuckle.AspNetCore.Filters;
 using System;
 using System.Collections.Generic;
@@ -49,6 +50,7 @@ namespace WebApplication1
             services.AddScoped<IRoleService, RoleService>();
             services.AddScoped<IAdminRepository,AdminRepository>();
             services.AddScoped<IAdminService, AdminService>();
+            services.AddScoped<IMenuRoleRepository, MenuRoleRepository>();
 
             services.AddCors(s => {
                 s.AddPolicy("cors", a =>

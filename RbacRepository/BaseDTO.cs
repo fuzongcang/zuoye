@@ -19,6 +19,12 @@ namespace RbacRepository
             return db.SaveChanges();
         }
 
+        public virtual int Add(List<T> list)
+        {
+            db.Set<T>().AddRange(list);
+            return db.SaveChanges();
+        }
+
         public virtual int Del(TKey k)
         {
             var list = db.Set<T>().Find(k);
