@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32407.343
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{2FFEE816-8769-4C2D-ADB8-BE1F60463A6B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{2FFEE816-8769-4C2D-ADB8-BE1F60463A6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{FC669513-6BF8-461C-AD32-4B0D6D5473A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Model", "Model\Model.csproj", "{FC669513-6BF8-461C-AD32-4B0D6D5473A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryEF", "ClassLibraryEF\ClassLibraryEF.csproj", "{DD38A72F-F0AE-4056-AA54-D60F5A40352D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibraryEF", "ClassLibraryEF\ClassLibraryEF.csproj", "{DD38A72F-F0AE-4056-AA54-D60F5A40352D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RbacRepository", "RbacRepository\RbacRepository.csproj", "{8C94599F-DAFB-415E-A83D-71448750E13C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RbacRepository", "RbacRepository\RbacRepository.csproj", "{8C94599F-DAFB-415E-A83D-71448750E13C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RbacApplication", "RbacApplication\RbacApplication.csproj", "{9BFE2BCD-DCE9-4DCA-B5E7-5CD54BA0A1E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RbacApplication", "RbacApplication\RbacApplication.csproj", "{9BFE2BCD-DCE9-4DCA-B5E7-5CD54BA0A1E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -31,5 +31,10 @@ namespace WebApplication1.Controllers
         {
             return Ok(admin.Page(Pindex,Psize));
         }
+        [HttpPost]
+        public IActionResult Shan(int id)
+        {
+            return Ok(admin.Shan(id));
+        }
     }
 }

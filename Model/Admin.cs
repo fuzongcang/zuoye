@@ -18,7 +18,7 @@ namespace Rbac.Entity
         ///管理员Id
         ///</summary>
         [Key]
-        public long AdminId { get; set; }
+        public int AdminId { get; set; }
 
         ///<summary>
         ///用户名

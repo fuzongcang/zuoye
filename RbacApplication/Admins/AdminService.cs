@@ -14,6 +14,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.Extensions.Configuration;
 using Rbac.Entity;
+using RbacRepository.AdminRole;
 
 namespace RbacApplication.Admins
 {
@@ -22,27 +23,36 @@ namespace RbacApplication.Admins
         private readonly IAdminRepository AdminRepository;
         private readonly IMapper mapper;
         private readonly IConfiguration configuration;
+        private readonly IAdminRoleRepository adminRoleRepository;
 
-        public AdminService(IAdminRepository AdminRepository, IMapper mapper, IConfiguration configuration)
+        public AdminService(IAdminRepository AdminRepository, IMapper mapper, IConfiguration configuration, IAdminRoleRepository adminRoleRepository)
             : base(AdminRepository, mapper)
         {
             this.AdminRepository = AdminRepository;
             this.mapper = mapper;
             this.configuration = configuration;
+            this.adminRoleRepository = adminRoleRepository;
         }
 
         public ResultDto Register(AdminDto dto)
         {
-            if (AdminRepository.Get(m => m.UserName == dto.UserName.ToLower()) != null)
+            if (AdminRepository.Get(m => m.UserName == dto.UserName.Trim().ToUpper()) != null)
             {
                 return new ResultDto { Code = 1, Msg = "已存在此用户" };
             }
             //密码、注册时间、末次登录时间
+            dto.UserName = dto.UserName.Trim().ToUpper();
             dto.Password = Md5(dto.Password);
             dto.CreateTime = DateTime.Now;
             dto.LastLoginTime = null;
 
-            AdminRepository.Add(mapper.Map<Rbac.Entity.Admin>(dto));
+            var Entity = mapper.Map<Admin>(dto);
+
+            AdminRepository.Add(Entity);
+            var list = dto.RoleId.Select(m => new AdminRole { RoleId = m, AdminId = Entity.AdminId }).ToList();
+            adminRoleRepository.Add(list);
+
+            //AdminRepository.Add(mapper.Map<Rbac.Entity.Admin>(dto));
 
             return new ResultDto { Code = 0, Msg = "注册成功" };
         }
@@ -111,6 +121,12 @@ namespace RbacApplication.Admins
             var list = mapper.Map<List<Admin>>(AdminRepository.GetAll().OrderBy(s => s.AdminId).Skip((Pindex - 1)* Psize).Take(Psize).ToList());
             var count = AdminRepository.GetAll().Count();
             return new Tuple<List<Admin>, int>(list, count);
+        }
+
+        public int Shan(int id)
+        {
+            var list = AdminRepository.Del(id);
+            return list;
         }
     }
 }

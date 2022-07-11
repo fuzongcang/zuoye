@@ -26,6 +26,8 @@ namespace RbacApplication.Role
 
         public int SavePermission(PermissionDto permission)
         {
+            menuRoleRepository.Del(m => m.RoleId == permission.RoleId);
+
             var ids = permission.MenuId.Select(m => new MenuRole { MenuId = m, RoleId = permission.RoleId }).ToList();
             return menuRoleRepository.Add(ids);
 

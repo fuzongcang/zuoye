@@ -11,7 +11,7 @@ namespace RbacApplication.Admins.Dto
         ///<summary>
         ///管理员Id
         ///</summary>
-        public long AdminId { get; set; }
+        public int AdminId { get; set; }
 
         ///<summary>
         ///用户名
@@ -37,6 +37,7 @@ namespace RbacApplication.Admins.Dto
         ///
         ///</summary>
         public DateTime CreateTime { get; set; }
+        public int[] RoleId { get; set; }
 
         
     }

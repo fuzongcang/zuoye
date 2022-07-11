@@ -14,6 +14,7 @@ namespace RbacRepository
         int Add(T list);
         int Add(List<T> list);
         int Del(TKey k);
+        int Del(Expression<Func<T, bool>> predicate);
         List<T> GetAll();
         T Get(int id);
         T Get(Expression<Func<T, bool>> predicate);

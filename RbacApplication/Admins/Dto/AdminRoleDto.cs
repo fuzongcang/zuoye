@@ -3,15 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Rbac.Entity
+namespace RbacApplication.Admins.Dto
 {
-    [Table("AdminRole")]
-    public class AdminRole
+    public class AdminRoleDto
     {
-        [Key]
         public int Id { get; set; }
         public int AdminId { get; set; }
         public int RoleId { get; set; }

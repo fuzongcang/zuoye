@@ -5853,11 +5853,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\专高六\\作业\\6.24\\WebApplication1\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+      "projectUniqueName": "D:\\专高六\\作业\\7.11\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
       "projectName": "WebApplication1",
-      "projectPath": "D:\\专高六\\作业\\6.24\\WebApplication1\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+      "projectPath": "D:\\专高六\\作业\\7.11\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
       "packagesPath": "C:\\Users\\86175\\.nuget\\packages\\",
-      "outputPath": "D:\\专高六\\作业\\6.24\\WebApplication1\\WebApplication1\\WebApplication1\\obj\\",
+      "outputPath": "D:\\专高六\\作业\\7.11\\WebApplication1\\WebApplication1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -5879,17 +5879,17 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\专高六\\作业\\6.24\\WebApplication1\\WebApplication1\\ClassLibraryEF\\ClassLibraryEF.csproj": {
-              "projectPath": "D:\\专高六\\作业\\6.24\\WebApplication1\\WebApplication1\\ClassLibraryEF\\ClassLibraryEF.csproj"
+            "D:\\专高六\\作业\\7.11\\WebApplication1\\ClassLibraryEF\\ClassLibraryEF.csproj": {
+              "projectPath": "D:\\专高六\\作业\\7.11\\WebApplication1\\ClassLibraryEF\\ClassLibraryEF.csproj"
             },
-            "D:\\专高六\\作业\\6.24\\WebApplication1\\WebApplication1\\Model\\Model.csproj": {
-              "projectPath": "D:\\专高六\\作业\\6.24\\WebApplication1\\WebApplication1\\Model\\Model.csproj"
+            "D:\\专高六\\作业\\7.11\\WebApplication1\\Model\\Model.csproj": {
+              "projectPath": "D:\\专高六\\作业\\7.11\\WebApplication1\\Model\\Model.csproj"
             },
-            "D:\\专高六\\作业\\6.24\\WebApplication1\\WebApplication1\\RbacApplication\\RbacApplication.csproj": {
-              "projectPath": "D:\\专高六\\作业\\6.24\\WebApplication1\\WebApplication1\\RbacApplication\\RbacApplication.csproj"
+            "D:\\专高六\\作业\\7.11\\WebApplication1\\RbacApplication\\RbacApplication.csproj": {
+              "projectPath": "D:\\专高六\\作业\\7.11\\WebApplication1\\RbacApplication\\RbacApplication.csproj"
             },
-            "D:\\专高六\\作业\\6.24\\WebApplication1\\WebApplication1\\RbacRepository\\RbacRepository.csproj": {
-              "projectPath": "D:\\专高六\\作业\\6.24\\WebApplication1\\WebApplication1\\RbacRepository\\RbacRepository.csproj"
+            "D:\\专高六\\作业\\7.11\\WebApplication1\\RbacRepository\\RbacRepository.csproj": {
+              "projectPath": "D:\\专高六\\作业\\7.11\\WebApplication1\\RbacRepository\\RbacRepository.csproj"
             }
           }
         }

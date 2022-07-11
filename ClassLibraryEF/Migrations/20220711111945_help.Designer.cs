@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ClassLibraryEF.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20220627124926_shel")]
-    partial class shel
+    [Migration("20220711111945_help")]
+    partial class help
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,9 +23,9 @@ namespace ClassLibraryEF.Migrations
 
             modelBuilder.Entity("Rbac.Entity.Admin", b =>
                 {
-                    b.Property<long>("AdminId")
+                    b.Property<int>("AdminId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint")
+                        .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int>("CreateId")
@@ -71,8 +71,8 @@ namespace ClassLibraryEF.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<long>("AdminId")
-                        .HasColumnType("bigint");
+                    b.Property<int>("AdminId")
+                        .HasColumnType("int");
 
                     b.Property<int>("RoleId")
                         .HasColumnType("int");

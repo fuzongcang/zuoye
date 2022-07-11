@@ -13,6 +13,7 @@ namespace RbacApplication.Admins
         ResultDto Register(AdminDto dto);
         TokenDto Login(LoginDto dto);
         Tuple<List<Admin>,int>  Page(int Pindex = 1,int Psize = 2);
+        int Shan(int id);
        
     }
 }

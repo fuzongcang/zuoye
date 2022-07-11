@@ -16,6 +16,7 @@ namespace RbacApplication
             CreateMap<RoleDto,Rbac.Entity.Role>().ReverseMap();
             CreateMap<AdminDto,Rbac.Entity.Admin>().ReverseMap();
             CreateMap<PermissionDto, Rbac.Entity.MenuRole>().ReverseMap();
+            CreateMap<AdminRoleDto, Rbac.Entity.AdminRole>().ReverseMap();
         }
     }
 }

@@ -31,12 +31,18 @@ namespace RbacRepository
             db.Remove(list);
             return db.SaveChanges();
         }
+        public virtual int Del(Expression<Func<T, bool>> predicate)
+        {
+            var entity = db.Set<T>().Where(predicate).ToList();
+            db.RemoveRange(entity);
+            return db.SaveChanges();
+        }
 
         public virtual T Get(int id)
         {
             return db.Set<T>().Find(id);
         }
-        public T Get(Expression<Func<T, bool>> predicate)
+        public virtual T Get(Expression<Func<T, bool>> predicate)
         {
             return db.Set<T>().Where(predicate).FirstOrDefault();
         }
